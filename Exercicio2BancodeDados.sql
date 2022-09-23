@@ -1,0 +1,36 @@
+CREATE DATABASE LOJA_VIRTUAL;
+-- USANDO A TABELA --
+USE LOJA_VIRTUAL;
+-- COLOCANDO ATRIBUTOS --
+CREATE TABLE TB_PRODUTOS(
+ID BIGINT AUTO_INCREMENT,
+NOME VARCHAR(1000),
+QUANTIDADE INT,
+PRECO NUMERIC(9,2),
+DESCRICAO CHAR(255),
+PRIMARY KEY (ID)
+);
+-- MOSTRAR A TABELA --
+SELECT * FROM TB_PRODUTOS;
+-- COLOCANDO DADOS NA TABELA --
+INSERT INTO TB_PRODUTOS (NOME, QUANTIDADE, PRECO, DESCRICAO)
+VALUES ("Tenis", 2, 550.99, "Marca Adidas"),
+       ("Chinelo", 10, 57.99, "Marca Topper"),
+       ("Lapis", 50, 1.99, "Marca Faber Castell"),
+       ("Caneta", 49, 7.99, "Marca Bic"),
+       ("Estojo", 10, 29.99, "Marca Kbom"),
+       ("Caderno", 25, 9.99, "Marca São Domingos"),
+       ("Cola", 36, 6.99, "Marca Pritt"),
+       ("Cola", 24, 5.99, "Marca Tenas");
+
+-- MAIOR VALOR --
+SELECT * FROM TB_PRODUTOS WHERE PRECO > 500.00;
+-- MENOR VALOR --
+SELECT * FROM TB_PRODUTOS WHERE PRECO < 500.00; 
+-- ATUALIZANDO UM VALOR --
+UPDATE TB_PRODUTOS SET PRECO = 501.00 WHERE ID = 2;
+
+
+
+
+
